@@ -1,10 +1,7 @@
 # Django settings for {{ project_name }} project.
 import os
 
-
-def project_dir(*paths):
-    base = os.path.realpath(os.path.join(os.path.dirname(__file__), '..'))
-    return os.path.join(base, *paths)
+from .helpers import project_dir
 
 
 DEBUG = False
@@ -41,11 +38,7 @@ USE_L10N = True
 
 # Absolute filesystem path to the directory that will hold user-uploaded files.
 # Example: "/home/media/media.lawrence.com/media/"
-# {% if demo %}
-MEDIA_ROOT = 'demo/media/'
-# {% else %}
-MEDIA_ROOT = ''
-# {% endif %}
+MEDIA_ROOT = project_dir("media")
 
 # path relative to the MEDIA_ROOT where armstrong will upload images
 ARMSTRONG_IMAGES_UPLOAD_PATH = 'armstrong/images/'
@@ -132,13 +125,12 @@ INSTALLED_APPS = (
     'armstrong.apps.articles',
     'armstrong.apps.content',
     'armstrong.apps.images',
-    'sorl.thumbnail',
     'armstrong.apps.related_content',
     'armstrong.hatband',
 
     # Third-party apps that Armstrong requires
-    'reversion',
     'mptt',
+    'reversion',
     'taggit',
 )
 
