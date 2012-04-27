@@ -14,4 +14,9 @@ setup(
         "armstrong.templates",
         "armstrong.templates.standard",
     ],
+    entry_points={
+        "armstrong.templates": [
+            "standard = armstrong.templates.standard",
+        ],
+    },
 )
