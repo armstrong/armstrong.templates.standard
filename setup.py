@@ -4,7 +4,7 @@ setup(
     name="armstrong.templates.standard",
     version="0.1alpha.0",
     packages=[
-        "armstrong.templates.standand",
+        "armstrong.templates.standard",
     ],
     package_dir={
         "armstrong.templates.standard": "project_template",
