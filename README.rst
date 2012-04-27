@@ -62,7 +62,7 @@ Foundation`_.
 
 To follow development, be sure to join the `Google Group`_.
 
-``armstrong.apps.articles`` is part of the `Armstrong`_ project.  You're
+``armstrong.templates.standard`` is part of the `Armstrong`_ project.  You're
 probably looking for that.
 
 .. _Texas Tribune: http://www.texastribune.org/
