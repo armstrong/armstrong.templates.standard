@@ -2,8 +2,6 @@ armstrong.templates.standard
 ============================
 Provides a basic project template for an Armstrong project
 
-.. warning:: This is a work in progress.  The code documented here may not
-             work yet.
 
 Usage
 -----
