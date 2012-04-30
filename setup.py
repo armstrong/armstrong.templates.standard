@@ -1,4 +1,14 @@
 from distutils.core import setup
+import os
+
+package_data = []
+BASE_DIR = os.path.dirname(__file__)
+walk_generator = os.walk(os.path.join(BASE_DIR, "project_template"))
+paths_and_files = [(paths, files) for paths, dirs, files in walk_generator]
+for path, files in paths_and_files:
+    prefix = path[len("project_template/"):]
+    if files:
+        package_data.append(os.path.join(prefix, "*.*"))
 
 setup(
     name="armstrong.templates.standard",
@@ -12,6 +22,9 @@ setup(
     ],
     package_dir={
         "armstrong.templates.standard": "project_template",
+    },
+    package_data={
+        "armstrong.templates.standard": package_data,
     },
     namespace_packages=[
         "armstrong",
